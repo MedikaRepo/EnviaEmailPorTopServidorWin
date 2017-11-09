@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="C:/Users/STI-004/Documents/ReferenciasJava/javax.mail-1.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/STI-004/Documents/ReferenciasJava/JasperReport/poi-3.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/STI-004/Documents/ReferenciasJava/JasperReport/itext-2.1.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/STI-004/Documents/ReferenciasJava/JasperReport/servlet-api-2.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/STI-004/Documents/ReferenciasJava/JasperReport/groovy-all-1.5.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/STI-004/Documents/ReferenciasJava/JasperReport/commons-beanutils-1.7.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/STI-004/Documents/ReferenciasJava/JasperReport/commons-digester-1.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/STI-004/Documents/ReferenciasJava/JasperReport/jasperreports-5.5.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/STI-004/Documents/ReferenciasJava/JasperReport/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/STI-004/Documents/ReferenciasJava/JasperReport/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/STI-004/Documents/ReferenciasJava/skwextensiontool.jar"/>
+	<classpathentry kind="lib" path="C:/Users/STI-004/Documents/ReferenciasJava/ConexaoSQL_sqljdbc4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/STI-004/Documents/ReferenciasJava/SankhyaW-extensions.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
