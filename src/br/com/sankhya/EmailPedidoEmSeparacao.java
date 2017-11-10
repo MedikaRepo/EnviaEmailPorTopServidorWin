@@ -22,6 +22,7 @@ public class EmailPedidoEmSeparacao {
 
 		//recupera o numero da negociaÃ§Ã£o
 		String comando=
+				//Verifica se foi gerada uma tarefa de separação para o pedido em questao
 				"SELECT X.NUNOTA, MIN (COD_SITUACAO) AS COD_SITUACAO FROM (  SELECT SXN.NUNOTA,"+
 						" ISNULL ((CASE MIN (CASE WHEN SEP.CANCELADA = 'S' THEN 100 WHEN SEP.SITUACAO = 5 THEN 10"+
 						" WHEN SEP.SITUACAO = 6 THEN 11 ELSE SEP.SITUACAO END)WHEN 0 THEN 0"+
