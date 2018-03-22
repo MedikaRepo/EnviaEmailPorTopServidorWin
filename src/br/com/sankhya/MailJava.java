@@ -4,6 +4,8 @@ package br.com.sankhya;
 import java.util.List;
 import java.util.Map;
 
+import javax.mail.Address;
+
 public class MailJava {
     
     public static final String TYPE_TEXT_PLAIN = "text/plain";
@@ -19,6 +21,7 @@ public class MailJava {
     private String subjectMail;
     private String bodyMail;
     private String toMailsUsers;
+    private String toCCMailsUsers;
     private List<String> fileMails;
     private String charsetMail;
     private String typeTextMail;
@@ -101,6 +104,14 @@ public class MailJava {
 
     public void setToMailsUsers(String toMailsUsers) {
         this.toMailsUsers = toMailsUsers;
+    }
+    
+    public String getToCCMailsUsers() {
+        return toCCMailsUsers;
+    }
+
+    public void setToCCMailsUsers(String toCCMailsUsers) {
+        this.toCCMailsUsers = toCCMailsUsers;
     }
 
     public List<String> getFileMails() {

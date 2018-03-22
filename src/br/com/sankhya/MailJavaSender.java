@@ -2,6 +2,7 @@ package br.com.sankhya;
 
 import javax.activation.DataHandler;
 import javax.activation.FileDataSource;
+import javax.mail.Address;
 import javax.mail.Authenticator;
 import javax.mail.PasswordAuthentication;
 import javax.mail.Message;
@@ -52,20 +53,12 @@ public class MailJavaSender {
         msg.setFrom(new InternetAddress(
                           mail.getUserMail(), mail.getFromNameMail())
          );
-        //boolean first = true;
-       // for (Map.Entry map : mail.getToMailsUsers().entrySet()) {
-            //if (first) {
-                //setamos o 1° destinatario
-                msg.addRecipient(Message.RecipientType.TO,
-                          new InternetAddress(mail.getToMailsUsers()));
-       //         first = false;
-         //   } else {
-                //setamos os demais destinatarios
-           //     msg.addRecipient(Message.RecipientType.CC,
-             //             new InternetAddress(dest));
-               //  );
-           // }
-        //}
+
+        //setamos o primeiro destinatario
+        msg.addRecipients(Message.RecipientType.TO, InternetAddress.parse(mail.getToMailsUsers()));
+        
+        //setamos o segundo destinatario
+        msg.addRecipients(Message.RecipientType.BCC, InternetAddress.parse(mail.getToCCMailsUsers()));
 
         // Adiciona um Assunto a Mensagem
         msg.setSubject(mail.getSubjectMail());
@@ -96,7 +89,7 @@ public class MailJavaSender {
 
         //adiciona a mensagem o conteudo texto e anexo
         msg.setContent(mps);
-
+        
         // Envia a Mensagem
         Transport.send(msg);
     }

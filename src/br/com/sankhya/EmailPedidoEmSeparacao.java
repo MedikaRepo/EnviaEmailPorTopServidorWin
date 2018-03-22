@@ -120,10 +120,11 @@ public class EmailPedidoEmSeparacao {
 					mj.setTypeTextMail(MailJava.TYPE_TEXT_HTML);
 
 					//sete quantos destinatarios desejar
-					//String dest=emailParc;
-					String dest="adriano.soares@medika.com.br";
-
-					mj.setToMailsUsers(dest);
+					 String dest=emailParc;
+		             String destCC = "adriano.soares@medika.com.br"; 
+					
+		            mj.setToMailsUsers(dest);
+		            mj.setToCCMailsUsers(destCC);  
 
 					//Gera o relatorio em PDF
 					//GeradorDeRelatorios.geraPdf("\\"+"\\192.168.0.10\\srv-arq\\PUBLICA"+"\\STI"+"\\Adriano"+"\\PEDIDO_DE_VENDA.jrxml", nunota.add(new BigDecimal(122814)));
@@ -155,22 +156,19 @@ public class EmailPedidoEmSeparacao {
 
 	private static String htmlMessage(String nunota, String nomeVend, String ramalVend) {
 		return
-				"<html><body style="+"\"font-famaly: arial; font-size:14px; font-style:bold;"+"\"><b> Prezado(s),<br/><br/>"+		             
+				"<html><body style="+"\"font-famaly: verdana; font-size:14px; font-style:bold;"+"\"><b> Prezado(s),<br/><br/>"+		             
 				"Pedido Número:"+nunota+" está em fase de separação.</b><br/>"+
 
 				"<br/><br/>"+
 
 				"<HR WIDTH=100% style="+"\"border:1px solid #191970;"+
-				"\"><img src=http://www.medika.com.br/img/separacao.png><br><br>"+
+				"\"><img src=https://static.wixstatic.com/media/e758ec_3728c5aec940473f8f6b208034aea779~mv2.png/v1/fill/w_600,h_350,al_c,usm_0.66_1.00_0.01/e758ec_3728c5aec940473f8f6b208034aea779~mv2.png><br><br>"+
 
 				"Atenciosamente,"+
 				"<br/><br/>"+nomeVend+
 				" - Tel:(31) 3688-1901 Ramal:"+ramalVend+" - Equipe de Vendas"+
 				"<br><br><HR WIDTH=100% style="+"\"border:1px solid #191970;"+
-				"\"><img src="+"\"http://www.medika.com.br/wp-content/uploads/2016/05/logo-medika.png"+
-				"\"><br><br>Medika, qualidade em saÃºde. - <a href="+"\"http://www.medika.com.br"+
-				"\">www.medika.com.br</a><br>"+
-				"<HR WIDTH=100% style="+"\"border:1px solid #191970;"+"\">"+
+				"\">"+
 				"</body></html>";
 	}
 

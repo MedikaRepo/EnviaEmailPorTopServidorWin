@@ -23,7 +23,7 @@ public class EmailPedidoNFEmitida {
         String comando="select nunota, codparc, codvend, codcontato from tgfcab " + 
                 "where statusnota='L' and ad_envioemailnotaemitida is null and ad_envioemailpropaprovada = 'SIM'"
                 + "and ad_envioemailsepestoque = 'SIM' "+
-                " and codtipoper in(204,205,900,901,912,925,931)and dtalter>='2017-09-28'";
+                " and codtipoper in(204,205,900,901,912,925,931)and dtalter>='2018-01-01'";
         System.out.println(comando);
         Statement smnt = ConnectMSSQLServer.conn.createStatement(); 
         smnt.execute(comando);
@@ -94,10 +94,11 @@ public class EmailPedidoNFEmitida {
 			mj.setTypeTextMail(MailJava.TYPE_TEXT_HTML);
 
 			//sete quantos destinatarios desejar
-			//String dest=emailParc;
-			String dest="adriano.soares@medika.com.br";
+			 String dest=emailParc;
+             String destCC = "adriano.soares@medika.com.br";
 
 			mj.setToMailsUsers(dest);
+			mj.setToCCMailsUsers(destCC);
             
 			//Gera o relatorio em PDF
 			//GeradorDeRelatorios.geraPdf("\\"+"\\192.168.0.10\\srv-arq\\PUBLICA"+"\\STI"+"\\Adriano"+"\\PEDIDO_DE_VENDA.jrxml", nunota.add(new BigDecimal(122814)));
@@ -126,22 +127,19 @@ public class EmailPedidoNFEmitida {
 
 	private static String htmlMessage(String nunota, String nomeVend, String ramalVend) {
 		return
-				"<html><body style="+"\"font-famaly: arial; font-size:14px; font-style:bold;"+"\"><b> Prezado(s),<br/><br/>"+		             
+				"<html><body style="+"\"font-famaly: verdana; font-size:14px; font-style:bold;"+"\"><b> Prezado(s),<br/><br/>"+		             
 				"Pedido Número:"+nunota+". Nota fiscal emitida.</b><br/>"+
 
 				"<br/><br/>"+
 
 				"<HR WIDTH=100% style="+"\"border:1px solid #191970;"+
-				"\"><img src=http://www.medika.com.br/img/nfemitida.png><br><br>"+
+				"\"><img src=https://static.wixstatic.com/media/e758ec_84975d6faa7a41d692ed52e80b9a4b8e~mv2.png/v1/fill/w_599,h_347,al_c,usm_0.66_1.00_0.01/e758ec_84975d6faa7a41d692ed52e80b9a4b8e~mv2.png><br><br>"+
 
 				"Atenciosamente,"+
 				"<br/><br/>"+nomeVend+
 				" - Tel:(31) 3688-1901 Ramal:"+ramalVend+" - Equipe de Vendas"+
 				"<br><br><HR WIDTH=100% style="+"\"border:1px solid #191970;"+
-				"\"><img src="+"\"http://www.medika.com.br/wp-content/uploads/2016/05/logo-medika.png"+
-				"\"><br><br>Medika, qualidade em saÃºde. - <a href="+"\"http://www.medika.com.br"+
-				"\">www.medika.com.br</a><br>"+
-				"<HR WIDTH=100% style="+"\"border:1px solid #191970;"+"\">"+
+				"\">"+
 				"</body></html>";
 	}
 

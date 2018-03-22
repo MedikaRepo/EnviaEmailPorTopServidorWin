@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-//teste git
+
 public class MainClass
 {
 
@@ -43,7 +43,6 @@ public class MainClass
 	}
 
 	public static void main(String[] args) throws SQLException 
-	//@Override
 	//public void doAction(ContextoAcao contexto) throws Exception
 	{
 
@@ -59,7 +58,7 @@ public class MainClass
 		//recupera o numero da negociação
 		String comando="select nunota, codparc, codvend, codcontato from tgfcab " + 
 				"where statusnota='L' and ad_envioemailsepestoque is null and ad_envioemailpropaprovada='SIM'"+
-				" and codtipoper in(204,205,900,901,912,925,931)and dtalter>='2017-09-28'";
+				" and codtipoper in(204,205,900,901,912,925,931)and dtalter>='2018-19-03'";
 		System.out.println(comando);
 
 		Statement smnt = ConnectMSSQLServer.conn.createStatement(); 
