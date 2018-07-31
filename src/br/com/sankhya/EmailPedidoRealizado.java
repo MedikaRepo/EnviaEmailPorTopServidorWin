@@ -23,7 +23,7 @@ public class EmailPedidoRealizado {
 		//recupera o numero da negociação
         String comando="select nunota, codparc, codvend, codcontato from tgfcab " + 
                 "where statusnota='L' and ad_envioemailpropaprovada is null"+
-                " and codtipoper in(204,205,900,901,912,925,931)and dtalter>='2018-19-03'";
+                " and codtipoper in(900,901,912,925,931)and dtalter>='2018-25-05'";
         System.out.println(comando);
         Statement smnt = ConnectMSSQLServer.conn.createStatement(); 
         smnt.execute(comando);
@@ -97,6 +97,7 @@ public class EmailPedidoRealizado {
 
 			//sete quantos destinatarios desejar
 			 String dest=emailParc;
+			 //String dest = "adriano.soares@medika.com.br";
              String destCC = "adriano.soares@medika.com.br";
 			
             mj.setToMailsUsers(dest);
@@ -135,7 +136,7 @@ public class EmailPedidoRealizado {
 				"<br/><br/>"+
 
 				"<HR WIDTH=100% style="+"\"border:1px solid #191970;"+
-				"\"><img src=https://static.wixstatic.com/media/e758ec_89f7a0fbdbeb455b8de790e8bce12002~mv2.png/v1/fill/w_600,h_350,al_c,usm_0.66_1.00_0.01/e758ec_89f7a0fbdbeb455b8de790e8bce12002~mv2.png><br><br>"+
+				"\"><img src=https://static.wixstatic.com/media/e2601a_7228fd6840e549e0ade900d130353fd7~mv2.png/v1/fill/w_788,h_349,al_c,usm_0.66_1.00_0.01/e2601a_7228fd6840e549e0ade900d130353fd7~mv2.png><br><br>"+
 
 				"Atenciosamente,"+
 				"<br/><br/>"+nomeVend+

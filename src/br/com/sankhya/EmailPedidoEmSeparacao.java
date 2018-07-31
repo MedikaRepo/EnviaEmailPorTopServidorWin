@@ -162,7 +162,7 @@ public class EmailPedidoEmSeparacao {
 				"<br/><br/>"+
 
 				"<HR WIDTH=100% style="+"\"border:1px solid #191970;"+
-				"\"><img src=https://static.wixstatic.com/media/e758ec_3728c5aec940473f8f6b208034aea779~mv2.png/v1/fill/w_600,h_350,al_c,usm_0.66_1.00_0.01/e758ec_3728c5aec940473f8f6b208034aea779~mv2.png><br><br>"+
+				"\"><img src=https://static.wixstatic.com/media/e2601a_d5db4660bb3140c7a002529ea902d5d4~mv2.png/v1/fill/w_788,h_349,al_c,usm_0.66_1.00_0.01/e2601a_d5db4660bb3140c7a002529ea902d5d4~mv2.png><br><br>"+
 
 				"Atenciosamente,"+
 				"<br/><br/>"+nomeVend+

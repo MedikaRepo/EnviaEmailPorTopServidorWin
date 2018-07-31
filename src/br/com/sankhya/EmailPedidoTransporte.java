@@ -22,8 +22,9 @@ public class EmailPedidoTransporte {
 		//recupera o numero da negociação
         String comando="select nunota, codparc, codvend, codcontato from tgfcab " + 
                 "where statusnota='L' and ad_envioemailtransporte is null and ad_envioemailpropaprovada = 'SIM'"
-                + "and ad_envioemailsepestoque = 'SIM' and ad_envioemailnotaemitida='SIM' "+
-                " and codtipoper in(204,205,900,901,912,925,931)and dtalter>='2018-01-01'";
+                //+ "and ad_envioemailsepestoque = 'SIM' 
+                +" and ad_envioemailnotaemitida='SIM' "+
+                " and codtipoper in(900,901,912,925,931)and dtalter>='2018-25-05'";
         System.out.println(comando);
         Statement smnt = ConnectMSSQLServer.conn.createStatement(); 
         smnt.execute(comando);
@@ -95,6 +96,7 @@ public class EmailPedidoTransporte {
 
 			//sete quantos destinatarios desejar
 		     String dest=emailParc;
+		     //String dest="adriano.soares@medika.com.br";
              String destCC = "adriano.soares@medika.com.br";
 			
            mj.setToMailsUsers(dest);
@@ -131,7 +133,7 @@ public class EmailPedidoTransporte {
 				"<br/><br/>"+
 
 				"<HR WIDTH=100% style="+"\"border:1px solid #191970;"+
-				"\"><img src=https://static.wixstatic.com/media/e758ec_61a370d43266445ab973f786da81d860~mv2.png/v1/fill/w_611,h_356,al_c,usm_0.66_1.00_0.01/e758ec_61a370d43266445ab973f786da81d860~mv2.png><br><br>"+
+				"\"><img src=https://static.wixstatic.com/media/e2601a_a594346021c74d9286e9124b8b23aa4c~mv2.png/v1/fill/w_788,h_349,al_c,usm_0.66_1.00_0.01/e2601a_a594346021c74d9286e9124b8b23aa4c~mv2.png><br><br>"+
 
 				"Atenciosamente,"+
 				"<br/><br/>"+nomeVend+

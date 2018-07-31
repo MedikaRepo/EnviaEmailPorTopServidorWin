@@ -22,8 +22,8 @@ public class EmailPedidoNFEmitida {
 		//recupera o numero da negociação
         String comando="select nunota, codparc, codvend, codcontato from tgfcab " + 
                 "where statusnota='L' and ad_envioemailnotaemitida is null and ad_envioemailpropaprovada = 'SIM'"
-                + "and ad_envioemailsepestoque = 'SIM' "+
-                " and codtipoper in(204,205,900,901,912,925,931)and dtalter>='2018-01-01'";
+               // + "and ad_envioemailsepestoque = 'SIM' "+
+                +" and codtipoper in(900,901,912,925,931)and dtalter>='2018-25-05'";
         System.out.println(comando);
         Statement smnt = ConnectMSSQLServer.conn.createStatement(); 
         smnt.execute(comando);
@@ -95,6 +95,7 @@ public class EmailPedidoNFEmitida {
 
 			//sete quantos destinatarios desejar
 			 String dest=emailParc;
+			//String dest="adriano.soares@medika.com.br";
              String destCC = "adriano.soares@medika.com.br";
 
 			mj.setToMailsUsers(dest);
@@ -133,7 +134,7 @@ public class EmailPedidoNFEmitida {
 				"<br/><br/>"+
 
 				"<HR WIDTH=100% style="+"\"border:1px solid #191970;"+
-				"\"><img src=https://static.wixstatic.com/media/e758ec_84975d6faa7a41d692ed52e80b9a4b8e~mv2.png/v1/fill/w_599,h_347,al_c,usm_0.66_1.00_0.01/e758ec_84975d6faa7a41d692ed52e80b9a4b8e~mv2.png><br><br>"+
+				"\"><img src=https://static.wixstatic.com/media/e2601a_929b52b624db40f99805e415953543b9~mv2.png/v1/fill/w_788,h_349,al_c,usm_0.66_1.00_0.01/e2601a_929b52b624db40f99805e415953543b9~mv2.png><br><br>"+
 
 				"Atenciosamente,"+
 				"<br/><br/>"+nomeVend+

@@ -2,9 +2,6 @@ package br.com.sankhya;
 
 
 import java.util.List;
-import java.util.Map;
-
-import javax.mail.Address;
 
 public class MailJava {
     

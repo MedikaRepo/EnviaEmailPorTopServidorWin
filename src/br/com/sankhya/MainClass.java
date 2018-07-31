@@ -56,9 +56,9 @@ public class MainClass
 		System.out.println("NF Emitida Concluido!\n");
 
 		//recupera o numero da negociação
-		String comando="select nunota, codparc, codvend, codcontato from tgfcab " + 
+		/*String comando="select nunota, codparc, codvend, codcontato from tgfcab " + 
 				"where statusnota='L' and ad_envioemailsepestoque is null and ad_envioemailpropaprovada='SIM'"+
-				" and codtipoper in(204,205,900,901,912,925,931)and dtalter>='2018-19-03'";
+				" and codtipoper in(900,901,912,925,931)and dtalter>='2018-19-03'";
 		System.out.println(comando);
 
 		Statement smnt = ConnectMSSQLServer.conn.createStatement(); 
@@ -70,7 +70,7 @@ public class MainClass
 			EmailPedidoEmSeparacao.PedidoSeparacao(result.getInt("nunota"), result.getString("codvend"), result.getString("codparc"), result.getString("codcontato"));;
 		}
 
-		System.out.println("Pedido Separacao Concluido!\n");
+		System.out.println("Pedido Separacao Concluido!\n");*/
 
 		EmailPedidoRealizado.PedidoRealizado();
 		System.out.println("Pedido Realizado Concluido!\n");

@@ -2,7 +2,6 @@ package br.com.sankhya;
 
 import javax.activation.DataHandler;
 import javax.activation.FileDataSource;
-import javax.mail.Address;
 import javax.mail.Authenticator;
 import javax.mail.PasswordAuthentication;
 import javax.mail.Message;
@@ -15,7 +14,6 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 import java.io.UnsupportedEncodingException;
-import java.util.Map;
 import java.util.Properties;
 
 public class MailJavaSender {
